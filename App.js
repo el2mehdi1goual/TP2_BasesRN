@@ -1,5 +1,14 @@
 
-import React from 'react';
+import {
+  View,
+  Text,
+  Image,
+  Button,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Alert
+} from 'react-native';import React from 'react';
 import {
   View,
   Text,
@@ -22,6 +31,20 @@ function CarteInfo({ titre, description }) {
 export default function App() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
+
+<Pressable
+  style={styles.action}
+  onPress={() => Alert.alert('Bienvenue', 'Bonjour El Mehdi !')}
+>
+  <Text style={styles.actionText}>Mon profil</Text>
+</Pressable>
+
+<Pressable
+  style={styles.action}
+  onPress={() => Alert.alert('Compétences', 'Je connais React Native.')}
+>
+  <Text style={styles.actionText}>Mes compétences</Text>
+</Pressable>
 
      
 <CarteInfo
@@ -56,10 +79,14 @@ export default function App() {
 <Text>J'apprends React Native.</Text>
 
 
-      <Button
-        title="Afficher un message"
-        onPress={() => Alert.alert('Bienvenue', 'Profil consulté !')}
-      />
+     
+<Pressable
+  style={styles.action}
+  onPress={() => Alert.alert('Information', 'Action réalisée !')}
+>
+  <Text style={styles.actionText}>Valider</Text>
+</Pressable>
+
       <View style={styles.row}>
   <View style={styles.box}>
     <Text>Bloc 1</Text>
@@ -132,5 +159,20 @@ cardTitle: {
   fontWeight: 'bold',
   marginBottom: 5
 },
+
+action: {
+  backgroundColor: '#2E7657',
+  paddingVertical: 12,
+  paddingHorizontal: 24,
+  borderRadius: 8,
+  marginTop: 12
+},
+
+actionText: {
+  color: '#FFFFFF',
+  fontWeight: 'bold',
+  textAlign: 'center'
+},
+
 
 });
