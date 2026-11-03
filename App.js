@@ -1,7 +1,6 @@
-
 import React from 'react';
-import Exercice1 from './exercices1,2,3/exercice1';
+import Exercice2 from './exercices1,2,3/exercice2';
 
 export default function App() {
-  return <Exercice1 />;
+  return <Exercice2 />;
 }
