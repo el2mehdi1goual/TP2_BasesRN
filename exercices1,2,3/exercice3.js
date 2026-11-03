@@ -25,7 +25,6 @@ export default function Exercice3() {
       <Pressable
   style={styles.button}
   onPress={() => afficherAlerte(
-    'Présentation',
     'Je suis étudiant en 4ème année 4IIR à l’EMSI.'
   )}
 >
